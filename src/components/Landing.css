@@ -1,0 +1,45 @@
+
+/* Add this CSS to your styles.css or your component's styling */
+
+.carousel-container {
+    max-width: 100%; /* Adjust the max-width as needed */
+    margin: auto;
+  }
+  
+  /* Hide navigation buttons */
+  .carousel .control-arrow {
+    display: none;
+  }
+  
+  /* Style the carousel view below images */
+  .carousel-below {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .carousel-below img {
+    /* width: 100px; 
+    height: 100px;  */
+    margin: 5px;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  .carousel .control-dots {
+    margin-bottom: 40px;
+  }
+  .carousel .slide img{
+    margin: 10px;
+    width: 90%;
+    height: 500px;
+    object-fit: cover;
+  }
+  div.thumbs-wrapper{
+    display: none;
+    
+  }
+  
+  .carousel-below img:hover {
+    border: 2px solid #007bff; /* Highlight border on hover */
+  }
+  
