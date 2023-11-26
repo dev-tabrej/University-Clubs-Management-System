@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'react-phone-number-input/style.css';
 import "./Login.css";
+import { Link } from 'react-router-dom';
 
 const SignUpForm = () => {
   const [username, setUsername] = useState('');
@@ -22,7 +23,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{height:"120%"}}>
       <label>
         ClubGram
       </label>
@@ -43,11 +44,9 @@ const SignUpForm = () => {
       <br />
 
       <div className="phone-input-container">
-        {/* Country Flag */}
         <select value={selectedCountry} onChange={(e) => setSelectedCountry(e.target.value)} className="country-select">
           <option value="US">US +1</option>
           <option value="IN">IND +91</option>
-          {/* Add more options for other countries as needed */}
         </select>
 
         {/* Phone Number Input */}
@@ -76,7 +75,7 @@ const SignUpForm = () => {
         <div className='line'>_________________________</div>
       </div>
       <p>
-        already Registered <a href="#">Log In</a>
+        already Registered <Link to="/components/Login">Log In</Link>
       </p>
     </form>
   );

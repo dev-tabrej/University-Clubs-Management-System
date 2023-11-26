@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Login.css"
-
+import { Link } from 'react-router-dom';
 const LoginForm = () => {
   // State for user input
   const [username, setUsername] = useState('');
@@ -49,7 +49,7 @@ const LoginForm = () => {
       </div>
       <a href="#">Forget your password?</a>
       <p>
-        Not Registered? <a href="#">Sign Up</a>
+        Not Registered? <Link to="/components/SignUp">Sign Up</Link>
       </p>
       
     </form>
