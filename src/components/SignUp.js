@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import 'react-phone-number-input/style.css';
 import "./Login.css";
 import { Link } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const SignUpForm = () => {
   const [username, setUsername] = useState('');
@@ -9,7 +10,7 @@ const SignUpForm = () => {
   const [phoneNo, setPhoneNo] = useState('');
   const [password, setPassword] = useState('');
   const [selectedCountry, setSelectedCountry] = useState('US'); // Default country
-
+  const history=useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -18,7 +19,7 @@ const SignUpForm = () => {
     console.log('Password:', password);
     console.log('Phone No:', phoneNo);
     console.log('Selected Country:', selectedCountry);
-
+    history("/components/Login")
     // Add your authentication logic (e.g., API call) here
   };
 

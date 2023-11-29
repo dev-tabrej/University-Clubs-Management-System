@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import "./Login.css"
 import { Link } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 const LoginForm = () => {
   // State for user input
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+  const history=useNavigate();
   // Function to handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,7 +15,7 @@ const LoginForm = () => {
     // For simplicity, let's just log the input for now
     console.log('Username:', username);
     console.log('Password:', password);
-
+    history("/")
     // You can add your authentication logic (e.g., API call) here
   };
 

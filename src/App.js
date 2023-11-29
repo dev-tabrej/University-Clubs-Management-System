@@ -3,20 +3,24 @@ import Navbar from './components/Navbar'
 import LoginForm from './components/Login'
 import SignUpForm from './components/SignUp'
 import Landing from './components/Landing'
-import { BrowserRouter as Router, Routes,Route  } from 'react-router-dom'
+import ClubList from './components/ClubList'
+import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 
 const App = () => {
-  return (<app className="app">
+  return (<div className="app">
     <Router>
       <Navbar />
       <Routes>
-        <Route exact path='/' element={<Landing />}/>
-        <Route exact path="/components/Login" element={<LoginForm />}/>
-        <Route exact path="/components/SignUp" element={<SignUpForm />}/>
+        <Route exact path='/' element={<Landing />} />
+        <Route path='/components/ClubList' element={< ClubList />}/>
+        <Route exact path="/components/Login" element={<LoginForm />} />
+        <Route exact path="/components/SignUp" element={<SignUpForm />} />
       </Routes>
+      <Footer/>
     </Router>
-  </app>
+  </div>
   )
 }
 
